@@ -1,6 +1,6 @@
 # Basel Anaya
 
-AI infrastructure engineer. Solo founder at [Maximlabs](https://maximlabs.ai).  
+AI infrastructure engineer. Solo founder at [Maximlabs](https://maximlabs.co).  
 Building production systems at the intersection of agents, security, and markets.  
 Based in Amman, Jordan.
 

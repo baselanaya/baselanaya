@@ -1,16 +1,34 @@
-## Hi there 👋
+# Basel Anaya
 
-<!--
-**baselanaya/baselanaya** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+AI infrastructure engineer. Solo founder at [Maximlabs](https://maximlabs.ai).  
+Building production systems at the intersection of agents, security, and markets.  
+Based in Amman, Jordan.
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Projects
+
+**[Kernex](https://github.com/baselanaya/Kernex)** `rust`  
+Zero-trust kernel-level execution hypervisor for AI agents. Sandboxed, auditable, minimal surface.
+
+**Cynosure** `python · rust`  
+Fully local autonomous perpetual swap trading system. Qwen3 inference via SGLang, Chronos-2 for time-series forecasting, DuckDB, custom MCP server.
+
+**[Valerie](https://github.com/baselanaya/Valerie)** `python`  
+500M parameter visual speech recognition model. VALLR-based architecture trained for lip reading.
+
+**Encleare** `typescript`  
+Mobile-first personal finance PWA. Plaid bank connectivity, AI-powered daily briefings, Supabase + Stripe.
+
+---
+
+## Stack
+
+`Rust` `Python` `TypeScript`  
+`Linux` · `LLM inference` · `systems programming` · `agentic infrastructure`
+
+---
+
+## Links
+
+[maximlabs.ai](https://maximlabs.ai) · [LinkedIn](https://linkedin.com/in/baselanaya)

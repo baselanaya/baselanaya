@@ -11,14 +11,11 @@ Based in Amman, Jordan.
 **[Kernex](https://github.com/baselanaya/Kernex)** `rust`  
 Zero-trust kernel-level execution hypervisor for AI agents. Sandboxed, auditable, minimal surface.
 
-**Cynosure** `python · rust`  
+**[Cynosure](https://github.com/baselanaya/Cynosure)** `python · rust`  
 Fully local autonomous perpetual swap trading system. Qwen3 inference via SGLang, Chronos-2 for time-series forecasting, DuckDB, custom MCP server.
 
 **[Valerie](https://github.com/baselanaya/Valerie)** `python`  
 500M parameter visual speech recognition model. VALLR-based architecture trained for lip reading.
-
-**Encleare** `typescript`  
-Mobile-first personal finance PWA. Plaid bank connectivity, AI-powered daily briefings, Supabase + Stripe.
 
 ---
 

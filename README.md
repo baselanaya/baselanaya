@@ -28,4 +28,4 @@ Fully local autonomous perpetual swap trading system. Qwen3 inference via SGLang
 
 ## Links
 
-[maximlabs.ai](https://maximlabs.ai) · [LinkedIn](https://linkedin.com/in/baselanaya)
+[maximlabs.ai](https://maximlabs.co) · [LinkedIn](https://linkedin.com/in/Basel-anaya)

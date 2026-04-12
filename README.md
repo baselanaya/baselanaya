@@ -1,4 +1,3 @@
-<!-- Header -->
 <div align="center">
 
 ```
@@ -15,7 +14,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Basel_Anaya-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/Basel-anaya)
 [![Website](https://img.shields.io/badge/maximlabs.co-D97757?style=for-the-badge&logo=firefox&logoColor=white)](https://maximlabs.co)
-[![Location](https://img.shields.io/badge/Amman,_Jordan-🇯🇴-222222?style=for-the-badge)](#)
+[![Location](https://img.shields.io/badge/Amman,_Jordan-222222?style=for-the-badge)](#)
 
 </div>
 
@@ -25,7 +24,7 @@
 
 ```
  agents need boundaries.    queries need answers.    markets need clarity.
-       ↓                           ↓                        ↓
+       |                           |                        |
     Kernex                       Mercer                  Cynosure
 ```
 
@@ -33,13 +32,13 @@
 
 ---
 
-## 🔐 [Kernex](https://github.com/baselanaya/Kernex) — Zero-Trust Agent Hypervisor
+## [Kernex](https://github.com/baselanaya/Kernex) — Zero-Trust Agent Hypervisor
 
 [![Rust](https://img.shields.io/badge/Rust-1.75+-orange?style=flat-square&logo=rust&logoColor=white)](https://github.com/baselanaya/Kernex)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://github.com/baselanaya/Kernex/blob/main/LICENSE)
 [![Release](https://img.shields.io/badge/release-v0.1.0-22c55e?style=flat-square)](https://github.com/baselanaya/Kernex/releases/tag/v0.1.0)
 [![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS-lightgrey?style=flat-square)](#)
-[![Language](https://img.shields.io/badge/language-98%25_Rust-orange?style=flat-square&logo=rust)](#)
+[![Language](https://img.shields.io/badge/98%25_Rust-orange?style=flat-square&logo=rust)](#)
 
 > *"Don't trust the model. Trust the kernel."*
 
@@ -53,34 +52,33 @@ python my_agent.py
 kernex run -- python my_agent.py
 ```
 
-**Key capabilities:**
-- 🛡️ **Audit mode** — auto-generates a least-privilege `kernex.yaml` policy by observing one run
-- ⚡ **< 2ms boot overhead** vs ~500ms for Docker
-- 🔒 **MCP co-sandboxing** — each MCP server gets its own independent policy
-- 🧵 **JIT interception** — blocked actions prompt the user rather than crash the agent
+- **Audit mode** — auto-generates a least-privilege `kernex.yaml` policy by observing one run
+- **< 2ms boot overhead** vs ~500ms for Docker
+- **MCP co-sandboxing** — each MCP server gets its own independent policy
+- **JIT interception** — blocked actions prompt the user rather than crash the agent
 
 `Rust` · `Landlock LSM` · `seccomp BPF` · `macOS Endpoint Security` · `Unix Domain Socket IPC`
 
 ---
 
-## 🗄️ [Mercer](https://github.com/baselanaya/Mercer) — Text-to-SQL for Messy Schemas
+## [Mercer](https://github.com/baselanaya/Mercer) — Text-to-SQL for Messy Schemas
 
 [![Python](https://img.shields.io/badge/python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/baselanaya/Mercer)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://github.com/baselanaya/Mercer/blob/main/LICENSE)
 [![Exec Accuracy](https://img.shields.io/badge/exec_accuracy-74%25-22c55e?style=flat-square)](#)
 [![GPU](https://img.shields.io/badge/GPU-8GB_VRAM-76B900?style=flat-square&logo=nvidia&logoColor=white)](#)
-[![FastAPI](https://img.shields.io/badge/FastAPI-backend-009688?style=flat-square&logo=fastapi&logoColor=white)](#)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](#)
 
-Plain English → accurate SQL, even on schemas with cryptic abbreviations (`cust_seg_cd`, `e_add`, `p_spec`), missing foreign keys, and inconsistent naming. Six-stage agentic pipeline running entirely on a consumer GPU — no vector database required.
+Plain English to accurate SQL, even on schemas with cryptic abbreviations (`cust_seg_cd`, `e_add`, `p_spec`), missing foreign keys, and inconsistent naming. Six-stage agentic pipeline running entirely on a consumer GPU — no vector database required.
 
 ```
 Question → [Entity Retrieval] → [Schema Linking] → [Query Decomposition]
-        → [Candidate Generation ×3] → [Execution + Scoring] → [Correction] → SQL
+        → [Candidate Generation x3] → [Execution + Scoring] → [Correction] → SQL
 ```
 
 **Benchmark (Qwen2.5-Coder-7B, RTX 4070 Laptop):**
 
-| Complexity | Exec Accuracy |
+| Complexity | Execution Accuracy |
 |---|---|
 | Window functions | 100% (7/7) |
 | Set operations | 100% (4/4) |
@@ -92,12 +90,12 @@ Question → [Entity Retrieval] → [Schema Linking] → [Query Decomposition]
 
 ---
 
-## 📈 [Cynosure](https://github.com/baselanaya/Cynosure) — Fully Local AI Trading System
+## [Cynosure](https://github.com/baselanaya/Cynosure) — Fully Local AI Trading System
 
 [![Python](https://img.shields.io/badge/python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/baselanaya/Cynosure)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://github.com/baselanaya/Cynosure)
 [![Status](https://img.shields.io/badge/status-active_development-3b82f6?style=flat-square)](#)
-[![Exchange](https://img.shields.io/badge/exchange-OKX_perpetual_swaps-000000?style=flat-square)](#)
+[![Exchange](https://img.shields.io/badge/OKX_perpetual_swaps-000000?style=flat-square)](#)
 [![Cycle](https://img.shields.io/badge/cycle-15_min_24%2F7-D97757?style=flat-square)](#)
 
 > *"Follow the star. Trade with clarity."*
@@ -110,13 +108,13 @@ Autonomous perpetual swap trading system for OKX — crypto majors, gold/silver,
   → Signal Persistence Gates → Risk Engine (Kelly sizing) → OKX Execution
 ```
 
-**Signal sources per cycle:** EMA/RSI/MACD/OFI across 3 timeframes · TimesFM 2.5 zero-shot forecast · L2 orderbook depth · Fear & Greed · funding rates · open interest · liquidation clusters
+Signal sources per cycle: EMA/RSI/MACD/OFI across 3 timeframes · TimesFM 2.5 zero-shot forecast · L2 orderbook depth · Fear & Greed · funding rates · open interest · liquidation clusters
 
 `Python` · `Qwen3.5-4B` · `Ollama` · `TimesFM 2.5` · `OKX MCP` · `SQLite` · `APScheduler`
 
 ---
 
-## 👁️ [Valerie](https://github.com/baselanaya/Valerie) — Visual Speech Recognition
+## [Valerie](https://github.com/baselanaya/Valerie) — Visual Speech Recognition
 
 [![Python](https://img.shields.io/badge/python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/baselanaya/Valerie)
 [![Params](https://img.shields.io/badge/parameters-500M-8B5CF6?style=flat-square)](#)
@@ -128,7 +126,7 @@ Autonomous perpetual swap trading system for OKX — crypto majors, gold/silver,
 
 ---
 
-## 🛠️ Stack
+## Stack
 
 <div align="center">
 
@@ -157,12 +155,15 @@ Autonomous perpetual swap trading system for OKX — crypto majors, gold/silver,
 
 ---
 
-## 📊 Stats
+## Stats
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=baselanaya&show_icons=true&theme=dark&hide_border=true&bg_color=0d1117&title_color=D97757&icon_color=D97757&text_color=c9d1d9&rank_icon=github" />
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=baselanaya&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=D97757&text_color=c9d1d9&langs_count=6" />
+<img width="495" src="https://streak-stats.demolab.com?user=baselanaya&theme=dark&hide_border=true&background=0d1117&ring=D97757&fire=D97757&currStreakLabel=D97757&sideLabels=c9d1d9&dates=c9d1d9&currStreakNum=ffffff&sideNums=ffffff" />
+
+<br /><br />
+
+<img width="495" src="https://github-readme-activity-graph.vercel.app/graph?username=baselanaya&bg_color=0d1117&color=c9d1d9&line=D97757&point=D97757&area=true&hide_border=true" />
 
 </div>
 
@@ -171,11 +172,9 @@ Autonomous perpetual swap trading system for OKX — crypto majors, gold/silver,
 <div align="center">
 
 ```
-systems programming · LLM inference · agentic infrastructure · kernel security
+systems programming  ·  LLM inference  ·  agentic infrastructure  ·  kernel security
 ```
 
-[maximlabs.co](https://maximlabs.co) · [LinkedIn](https://linkedin.com/in/Basel-anaya)
-
-*Building in Amman, Jordan 🇯🇴*
+[maximlabs.co](https://maximlabs.co) · [LinkedIn](https://linkedin.com/in/Basel-anaya) · Amman, Jordan
 
 </div>

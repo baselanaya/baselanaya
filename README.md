@@ -1,128 +1,53 @@
 <div align="center">
 
-```
-╔══════════════════════════════════════════════════════════════╗
-║           building the infrastructure layer for agents        ║
-╚══════════════════════════════════════════════════════════════╝
-```
-
-# Basel Anaya
-
-**AI Infrastructure Engineer · Solo Founder @ [Maximlabs](https://maximlabs.co)**
-
-*Agents. Security. Markets. All local. All production.*
+<img src="assets/banner.svg" alt="Basel Anaya — building the infrastructure layer for agents" width="100%"/>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Basel_Anaya-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/Basel-anaya)
 [![Website](https://img.shields.io/badge/maximlabs.co-D97757?style=for-the-badge&logo=firefox&logoColor=white)](https://maximlabs.co)
 [![Location](https://img.shields.io/badge/Amman,_Jordan-222222?style=for-the-badge)](#)
 
+**AI Infrastructure Engineer · Solo Founder @ [Maximlabs](https://maximlabs.co)**
+
+*Agents. Security. Markets. All local. All production.*
+
 </div>
 
 ---
+
+## [⬢ Cirax](https://github.com/baselanaya/Cirax) — now shipping
 
 <div align="center">
 
-```
- agents need boundaries.    queries need answers.    markets need clarity.
-       |                           |                        |
-    Kernex                       Mercer                  Cynosure
-```
+<img src="assets/cirax.svg" alt="Cirax" width="92"/>
+
+**An invisible AI copilot that floats over your screen — sees what you see,<br>hears your meetings, and stays hidden from screen shares.**
+
+[![Release](https://img.shields.io/github/v/release/baselanaya/Cirax?style=flat-square&color=5B9BFF)](https://github.com/baselanaya/Cirax/releases)
+[![CI](https://img.shields.io/github/actions/workflow/status/baselanaya/Cirax/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/baselanaya/Cirax/actions/workflows/ci.yml)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-3D6FD8?style=flat-square)]()
+[![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square)](https://github.com/baselanaya/Cirax/blob/main/LICENSE)
 
 </div>
 
----
+A free, self-hosted Cluely alternative. BYOK — OpenAI, Anthropic, Gemini, Azure, or any OpenAI-compatible endpoint — with everything sensitive staying on your machine:
 
-## [Kernex](https://github.com/baselanaya/Kernex) — Zero-Trust Agent Hypervisor
+- **Stealth where the OS allows it** — `WDA_EXCLUDEFROMCAPTURE` on Windows; honest per-platform reporting everywhere else (no fake promises)
+- **Local Whisper STT** — microphone + meeting audio transcribed offline, keys encrypted via the OS keyring
+- **Eye-contact camera companion** — a virtual webcam that corrects your gaze while you read answers, driven by a MobileGaze network at ~7 ms/frame on CPU
+- **Real releases** — CI-built Linux x64/arm64 AppImages and a Windows installer on every version tag
 
-[![Rust](https://img.shields.io/badge/Rust-1.75+-orange?style=flat-square&logo=rust&logoColor=white)](https://github.com/baselanaya/Kernex)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://github.com/baselanaya/Kernex/blob/main/LICENSE)
-[![Release](https://img.shields.io/badge/release-v0.1.0-22c55e?style=flat-square)](https://github.com/baselanaya/Kernex/releases/tag/v0.1.0)
-[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS-lightgrey?style=flat-square)](#)
-[![Language](https://img.shields.io/badge/98%25_Rust-orange?style=flat-square&logo=rust)](#)
-
-> *"Don't trust the model. Trust the kernel."*
-
-OS-level execution sandbox for AI agents. A single statically-compiled Rust binary that intercepts syscalls in real time using **Linux Landlock LSM + seccomp BPF** — before the agent process even boots. No VMs. No daemons. No code changes required.
-
-```bash
-# Before
-python my_agent.py
-
-# After — fully sandboxed at the OS level
-kernex run -- python my_agent.py
-```
-
-- **Audit mode** — auto-generates a least-privilege `kernex.yaml` policy by observing one run
-- **< 2ms boot overhead** vs ~500ms for Docker
-- **MCP co-sandboxing** — each MCP server gets its own independent policy
-- **JIT interception** — blocked actions prompt the user rather than crash the agent
-
-`Rust` · `Landlock LSM` · `seccomp BPF` · `macOS Endpoint Security` · `Unix Domain Socket IPC`
+`Electron` · `JavaScript` · `Whisper.cpp` · `ONNX Runtime` · `MediaPipe`
 
 ---
 
-## [Mercer](https://github.com/baselanaya/Mercer) — Text-to-SQL for Messy Schemas
+## Projects
 
-[![Python](https://img.shields.io/badge/python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/baselanaya/Mercer)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://github.com/baselanaya/Mercer/blob/main/LICENSE)
-[![Exec Accuracy](https://img.shields.io/badge/exec_accuracy-74%25-22c55e?style=flat-square)](#)
-[![GPU](https://img.shields.io/badge/GPU-8GB_VRAM-76B900?style=flat-square&logo=nvidia&logoColor=white)](#)
-[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](#)
-
-Plain English to accurate SQL, even on schemas with cryptic abbreviations (`cust_seg_cd`, `e_add`, `p_spec`), missing foreign keys, and inconsistent naming. Six-stage agentic pipeline running entirely on a consumer GPU — no vector database required.
-
-```
-Question → [Entity Retrieval] → [Schema Linking] → [Query Decomposition]
-        → [Candidate Generation x3] → [Execution + Scoring] → [Correction] → SQL
-```
-
-**Benchmark (Qwen2.5-Coder-7B, RTX 4070 Laptop):**
-
-| Complexity | Execution Accuracy |
+| | |
 |---|---|
-| Window functions | 100% (7/7) |
-| Set operations | 100% (4/4) |
-| Aggregation | 88% (7/8) |
-| Basic SQL | 75% (6/8) |
-| **Overall (50 stratified)** | **74%** |
-
-`Python` · `llama.cpp` · `Qwen2.5-Coder-7B` · `Triton` · `FastAPI` · `React` · `Redis` · `SQLAlchemy`
-
----
-
-## [Cynosure](https://github.com/baselanaya/Cynosure) — Fully Local AI Trading System
-
-[![Python](https://img.shields.io/badge/python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/baselanaya/Cynosure)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://github.com/baselanaya/Cynosure)
-[![Status](https://img.shields.io/badge/status-active_development-3b82f6?style=flat-square)](#)
-[![Exchange](https://img.shields.io/badge/OKX_perpetual_swaps-000000?style=flat-square)](#)
-[![Cycle](https://img.shields.io/badge/cycle-15_min_24%2F7-D97757?style=flat-square)](#)
-
-> *"Follow the star. Trade with clarity."*
-
-Autonomous perpetual swap trading system for OKX — crypto majors, gold/silver, US equity index perps. Zero cloud LLM dependency. A local **Qwen3.5-4B** synthesizer reads a pre-computed expert signal brief (~500 tokens) and outputs a single structured JSON decision; all risk logic runs in deterministic Python.
-
-```
-15-min cycle:
-  Expert Pipeline → MarketBrief (~500 tok) → LLM Synthesis (5-8s)
-  → Signal Persistence Gates → Risk Engine (Kelly sizing) → OKX Execution
-```
-
-Signal sources per cycle: EMA/RSI/MACD/OFI across 3 timeframes · TimesFM 2.5 zero-shot forecast · L2 orderbook depth · Fear & Greed · funding rates · open interest · liquidation clusters
-
-`Python` · `Qwen3.5-4B` · `Ollama` · `TimesFM 2.5` · `OKX MCP` · `SQLite` · `APScheduler`
-
----
-
-## [Valerie](https://github.com/baselanaya/Valerie) — Visual Speech Recognition
-
-[![Python](https://img.shields.io/badge/python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://github.com/baselanaya/Valerie)
-[![Params](https://img.shields.io/badge/parameters-500M-8B5CF6?style=flat-square)](#)
-[![Architecture](https://img.shields.io/badge/architecture-VALLR-8B5CF6?style=flat-square)](#)
-
-500M parameter lip-reading model. VALLR-based architecture that transcribes speech from video without audio.
-
-`Python` · `PyTorch` · `VALLR`
+| 🔐 **[Kernex](https://github.com/baselanaya/Kernex)** — zero-trust execution hypervisor for AI agents. A single static Rust binary that sandboxes any agent at the OS level with **Landlock LSM + seccomp BPF** — before the process boots. Audit mode generates least-privilege policies by observing one run; **< 2 ms overhead** vs ~500 ms for Docker. <br/>`Rust` `Landlock` `seccomp` `MCP` | 🗄️ **[Mercer](https://github.com/baselanaya/Mercer)** — text-to-SQL for messy production schemas. Six-stage agentic pipeline on a consumer GPU, no vector DB. **74% execution accuracy** on stratified benchmarks with Qwen2.5-Coder-7B, 100% on window functions. <br/>`Python` `llama.cpp` `Triton` `FastAPI` |
+| 📈 **[Cynosure](https://github.com/baselanaya/Cynosure)** — fully local autonomous trading system for OKX perpetual swaps. A local Qwen3.5-4B synthesizer reads a ~500-token expert signal brief each 15-min cycle; deterministic Python owns all risk logic. Zero cloud LLM dependency. <br/>`Python` `TimesFM 2.5` `Ollama` `OKX` | 🗣️ **[Valerie](https://github.com/baselanaya/Valerie)** — visual speech recognition. A 500M-parameter VALLR-based lip-reading model that transcribes speech from video alone. <br/>`Python` `PyTorch` |
+| 🛡️ **[Orion](https://github.com/baselanaya/Orion)** — self-hosted privacy VPN. Obfuscated WireGuard with a Tor-enforced Ghost mode. <br/>`Rust` `WireGuard` `Tor` | 🎬 **[Atlas](https://github.com/baselanaya/Atlas)** — multi-model AI soundtrack generation playground for cinematic and game composers. <br/>`Python` |
+| 👻 **[RemnantUE5](https://github.com/baselanaya/RemnantUE5)** — first-person horror survival game in Unreal Engine 5.8, built as SAE Institute coursework. <br/>`C++` `UE5` | 🌐 **[Maximlabs](https://maximlabs.co)** — the umbrella for all of it: infrastructure for agents that run locally, execute safely, and act under clear rules. |
 
 ---
 
@@ -134,11 +59,14 @@ Signal sources per cycle: EMA/RSI/MACD/OFI across 3 timeframes · TimesFM 2.5 ze
 
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 
 **Inference & ML**
 
 ![llama.cpp](https://img.shields.io/badge/llama.cpp-D97757?style=for-the-badge)
+![ONNX Runtime](https://img.shields.io/badge/ONNX_Runtime-005CED?style=for-the-badge)
 ![SGLang](https://img.shields.io/badge/SGLang-222222?style=for-the-badge)
 ![Triton](https://img.shields.io/badge/Triton_GPU_Kernels-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
@@ -146,9 +74,9 @@ Signal sources per cycle: EMA/RSI/MACD/OFI across 3 timeframes · TimesFM 2.5 ze
 **Systems & Infra**
 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Electron](https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 </div>
